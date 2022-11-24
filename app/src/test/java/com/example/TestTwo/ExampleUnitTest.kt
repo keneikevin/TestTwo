@@ -1,4 +1,4 @@
-package com.example.atry
+package com.example.TestTwo
 
 import org.junit.Test
 

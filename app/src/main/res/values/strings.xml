@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Try</string>
+    <string name="app_name">TestTwo</string>
+    <string name="mpesa">MPESA</string>
 </resources>
