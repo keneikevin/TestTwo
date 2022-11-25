@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity(){
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
         if (ActivityCompat.checkSelfPermission(this,Manifest.permission.READ_SMS) != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.READ_SMS),requestReadSms)
         }else{
@@ -41,7 +42,7 @@ class MainActivity : AppCompatActivity(){
         grantResults: IntArray
     ) {
           super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode == requestReadSms) readSmsMessages("",null)
+        if (requestCode == requestReadSms) readSmsMessages("", "address LIKE '${getString(R.string.mpesa)}'")
     }
 
     private fun readSmsMessages(uriString: String, selection: String?) {
